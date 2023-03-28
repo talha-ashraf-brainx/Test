@@ -16,7 +16,7 @@ class Animal {
 
   class Lion extends Animal {
     speak() {
-      return "Only Roars!";
+      return "Roars and Purrs!";
     }
   }
   
