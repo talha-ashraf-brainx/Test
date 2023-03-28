@@ -30,9 +30,7 @@ class Animal {
   const factory = new AnimalFactory();
   const dog = factory.createAnimal("dog");
   const cat = factory.createAnimal("cat");
-  const unknown = factory.createAnimal("bird");
   
   console.log(dog.speak()); 
   console.log(cat.speak()); 
-  console.log(unknown);
   
