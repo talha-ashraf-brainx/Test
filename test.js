@@ -13,6 +13,12 @@ class Animal {
       return "Meow!";
     }
   }
+
+  class Lion extends Animal {
+    speak() {
+      return "Roar!";
+    }
+  }
   
   class AnimalFactory {
     createAnimal(animalType) {
@@ -20,7 +26,10 @@ class Animal {
         return new Dog();
       } else if (animalType === "cat") {
         return new Cat();
-      } else {
+      } else if (animalType == "lion"){
+        return new Lion()
+      }
+       else {
         return null;
       }
     }
@@ -30,7 +39,10 @@ class Animal {
   const factory = new AnimalFactory();
   const dog = factory.createAnimal("dog");
   const cat = factory.createAnimal("cat");
+  const lion = factory.createAnimal("lion");
   
   console.log(dog.speak()); 
   console.log(cat.speak()); 
+  console.log(lion.speak()); 
+
   
